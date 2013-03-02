@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<p>Paste a copy of your CSV formatted record entries in the following format:</p>
+<pre>
+    COST      DESC      DATE      CATEGORY
+</pre>
+<form action="{{ url_for('from_csv') }}">
+    <textarea cols="100" rows="20" placeholder="Enter your CSV information here"></textarea>
+    <br />
+    <input type="submit" value="Commit" />
+</form>
+{% endblock %}
+

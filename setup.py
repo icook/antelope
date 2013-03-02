@@ -1,12 +1,19 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup, find_packages
 
-setup(name='Distutils',
-      version='1.0',
-      description='Python Distribution Utilities',
-      author='Greg Ward',
-      author_email='gward@python.net',
+requires = ['pymongo',
+            'flask',
+            'flask_mongoengine',
+            'mongoengine',
+            'flask-script']
+
+setup(name='antelope',
+      version='0.1',
+      description='A simple finance management application',
+      author='Isaac Cook',
+      author_email='isaac@simpload.com',
+      install_requires=requires,
       url='http://www.python.org/sigs/distutils-sig/',
-      packages=['distutils', 'distutils.command'],
+      packages=find_packages(),
      )

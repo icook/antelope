@@ -1,4 +1,12 @@
 *.py[cod]
+*.swp
+*.swo
+.idea
+node_modules
+.cake_task_cache
+
+# tmp saves
+*~
 
 # C extensions
 *.so
