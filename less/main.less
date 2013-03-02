@@ -2,6 +2,7 @@
 Fonts
 *********************************************/
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|Fjalla+One|Nunito:300);
+@import "helpers.less";
 
 HTML, BODY {
     height: 100%;
@@ -21,11 +22,16 @@ BODY {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
+  &.h {
+    display: none;
+  }
   &.g {
     background-color: #bbffbb;
+    display: inline-block;
   }
   &.b {
     background-color: #cf867e;
+    display: inline-block;
   }
 }
 #content, #footer {
@@ -59,4 +65,42 @@ BODY {
 }
 #nav li a:hover {
 	background-color: #fff;
+}
+table {
+  min-width: 500px;
+  border:1px solid #aaaaaa;
+  border-top:none;
+  .border-radius(0px, 4px, 4px, 0px);
+  border-spacing:0px;
+  text-align: center;
+  border-collapse:collapse;
+  margin:auto;
+
+  thead {
+    tr {
+      td {
+        font-family: Nunito, Cambria, Georgia;
+        border-bottom: 1px solid #F3C14F;
+      }
+    }
+  }
+
+  tr {
+    td {
+      padding:5px;
+      border-bottom: 1px solid #999999;
+      font-family: 'PT Sans', sans-serif;
+    }
+  }
+  caption {
+    .border-radius(4px, 0px, 0px, 4px);
+    color: #000;
+    background-color: #C9C9C9;
+    width: 100%;
+    font-size:16pt;
+    font-family: 'Fjalla One', sans-serif;
+    padding: 6px 8px;
+    border: 2px solid #5C6066;
+  }
+
 }

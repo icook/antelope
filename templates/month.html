@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Month Review{% endblock %}
+
+{% block head %}
+     {{ super() }}
+     <script type="text/javascript">
+     </script>
+ {% endblock %}
+
+{% block content %}
+<table>
+    <caption>November</caption>
+    <thead>
+    <tr>
+        <td>Amount</td>
+        <td>Description</td>
+        <td>Location</td>
+        <td>Category</td>
+        <td>Date</td>
+    </tr>
+    </thead>
+{% for entry in entries %}
+    <tr>
+        <td>{{ entry.amount }}</td>
+        <td>{{ entry.desc }}</td>
+        <td>{{ entry.location }}</td>
+        <td>{{ entry.cat }}</td>
+        <td>{{ entry.date }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
