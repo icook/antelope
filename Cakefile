@@ -67,8 +67,6 @@ rmDir = (dirPath) ->
       i++
 
 task 'clean', 'remove everything from "assets/generated" and all .pyc and ~ files', ->
-    rmDir css_out+"/"
-    rmDir js_out+"/"
     exec "find . -name \*.pyc -delete", (error, stdout, stderr) ->
         console.log stdout
     exec "find . -name '*~' -delete", (error, stdout, stderr) ->

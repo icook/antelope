@@ -7,11 +7,28 @@ Fonts
 HTML, BODY {
     height: 100%;
     margin:0px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
 }
 BODY {
     background-color: #FAFAFA;
     font-family: 'PT Sans', sans-serif;
 }
+
+footer {
+    color: #666;
+    background: #222;
+    padding: 17px 0 18px 0;
+    border-top: 1px solid #000;
+}
+footer a {
+    color: #999;
+}
+footer a:hover {
+    color: #efefef;
+}
+
 #alert {
   clear:both;
   display: none;

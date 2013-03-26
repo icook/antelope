@@ -1,6 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|Fjalla+One|Nunito:300);
-HTML,BODY{height:100%;margin:0px;}
+HTML,BODY{height:100%;margin:0px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
 BODY{background-color:#FAFAFA;font-family:'PT Sans',sans-serif;}
+footer{color:#666;background:#222;padding:17px 0 18px 0;border-top:1px solid #000;}
+footer a{color:#999;}
+footer a:hover{color:#efefef;}
 #alert{clear:both;display:none;padding:10px 100px;text-align:center;margin:20px;border:solid 3px #444;-moz-border-radius:7px;-webkit-border-radius:7px;border-radius:7px;}#alert.h{display:none;}
 #alert.g{background-color:#bbffbb;display:inline-block;}
 #alert.b{background-color:#cf867e;display:inline-block;}
