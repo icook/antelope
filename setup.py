@@ -15,5 +15,5 @@ setup(name='antelope',
       author_email='isaac@simpload.com',
       install_requires=requires,
       url='http://www.python.org/sigs/distutils-sig/',
-      packages=find_packages(),
+      packages=find_packages('src'),
      )
