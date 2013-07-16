@@ -6,7 +6,8 @@ requires = ['pymongo',
             'flask',
             'flask_mongoengine',
             'mongoengine',
-            'flask-script']
+            'flask-script',
+            'yota']
 
 setup(name='antelope',
       version='0.1',
