@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Add new entry{% endblock %}
+
+{% block head %}
+     {{ super() }}
+     <script type="text/javascript">
+     </script>
+ {% endblock %}
+
+{% block content %}
+{{ entry_form|safe }}
+{% endblock %}

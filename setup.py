@@ -17,4 +17,5 @@ setup(name='antelope',
       install_requires=requires,
       url='http://www.python.org/sigs/distutils-sig/',
       packages=find_packages('src'),
+      package_dir={'': 'src'}
      )

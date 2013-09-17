@@ -3,6 +3,7 @@ from flask import Flask, Blueprint, render_template, url_for, request
 import json
 from flask.ext.mongoengine import MongoEngine
 from flask.views import MethodView
+from antelope.forms import ImportForm, NewEntry
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 app.config["MONGODB_SETTINGS"] = {'DB': "antelope_finance"}
@@ -18,6 +19,8 @@ def entry(id):
 
 @app.route("/import", methods=['GET', 'POST'])
 def from_csv():
+    form = ImportForm()
+
     if request.method == 'POST':
         for line in request.form['data'].split('\n'):
             fields = line.split(",")
@@ -29,9 +32,24 @@ def from_csv():
 def month():
     return render_template('month.html', entries=Entry.objects)
 
+@app.route("/add")
+def new():
+    form = NewEntry()
+    form.location.autolist = ['test', 'two', 'some']
+
+    if request.method == 'POST':
+        success, out = form.validate_render(request.form)
+        if success:
+            print "Whoo! We should do some sort of database stuff here..."
+    else:
+        out = form.render()
+    return render_template('new_entry.html', entry_form=form.render())
+
+
 @app.route("/")
 def hello():
-    return "Hello World!"
+    #entry = Entry.objects.sort({
+    return render_template('home.html')
 
 class Entry(db.Document):
     id = db.ObjectIdField()
