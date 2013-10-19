@@ -13,6 +13,6 @@ class NewEntry(yota.Form):
     title = "Add a new entry"
     location = AutocompleteNode()
     total = EntryNode()
-    cateogyr = EntryNode()
+    category = EntryNode()
     note = TextareaNode()
     submit = SubmitNode()

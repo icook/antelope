@@ -7,7 +7,7 @@ requires = ['pymongo',
             'flask_mongoengine',
             'mongoengine',
             'flask-script',
-            'yota']
+            'yota>=0.3']
 
 setup(name='antelope',
       version='0.1',
@@ -16,6 +16,7 @@ setup(name='antelope',
       author_email='isaac@simpload.com',
       install_requires=requires,
       url='http://www.python.org/sigs/distutils-sig/',
+      dependency_links=["https://github.com/icook/yota/tarball/0.3#egg=yota-0.3"],
       packages=find_packages('src'),
       package_dir={'': 'src'}
      )
